@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "insta-bot"
+version = "0.1.0"
+description = ""
+authors = ["Alexis Campan"]
+readme = "README.md"
+packages = [{include = "insta_bot"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selenium = "^4.5.0"
+random-user-agent = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
