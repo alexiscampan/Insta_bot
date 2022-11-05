@@ -25,7 +25,8 @@ class InstaBot:
         chrome_options.add_argument("--disable-gpu")
         chrome_options.add_argument(f"--user-agent={user_agent}")
         
-        PROXY = "http://20.111.54.16:8123"
+        # If you are using PROXY
+        PROXY = "http://my_proxy"
         
         prox = Proxy()
         prox.proxy_type = ProxyType.MANUAL
@@ -38,7 +39,9 @@ class InstaBot:
         
         # self.driver = webdriver.Chrome(options = chrome_options, desired_capabilities = capabilities)
         # self.driver.get('http://lumtest.com/myip.json')
+        
         self.driver = webdriver.Chrome(options = chrome_options)
+        self.driver.set_window_size(500, 800)
         self.driver.get("https://instagram.com")
         sleep(2)
         self.driver.find_element(By.XPATH,"//button[contains(text(),'Autoriser')]")\
